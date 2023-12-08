@@ -1,10 +1,10 @@
-<h1 align="center">unyt.land - Open Source CDN</h1>
+<h1 align="center">unyt.land - TypeScript for web</h1>
 
 <p align="center">
   <img src="https://cdn.unyt.org/unyt-resources/logos/unyt/light-transparent.svg" alt="unyt.land-logo" width="128px" height="128px"/>
   <br>
   <i>
-    A super-fast CDN that enables seamless TypeScript module loading directly in the browser.<br/>
+    Our super-fast CDN that enables seamless TypeScript module loading directly in the browser.<br/>
     Use <a href="https://deno.land">Deno</a> modules and open-source TypeScript code in your browser in a matter of seconds.
   </i>
   <br>
@@ -31,7 +31,7 @@
 <hr>
 
 
-unyt.land is a free CDN with automatic TypeScript / SCSS transpilation. Our goal is to provide a reliable CDN service for open-source web projects out there.
+[unyt.land](https://unyt.land) is a free CDN with automatic TypeScript / SCSS transpilation. Our goal is to provide a reliable CDN service for open-source web projects out there.
 
 
 # Why unyt.land?
@@ -66,14 +66,14 @@ import mod from "https://unyt.land/x/mod.ts"
 This polyfill is still experimental and does not implement all Deno APIs correctly.
 
 
-### Load a specific verion (xml2js@1.0.0)
+### Load a specific version (xml2js@1.0.0)
 ```
 https://unyt.land/x/xml2js@1.0.0/mod.ts
 ```
 
-### Load without deno polyfill (not recommended)
+### Load std modules (csv@0.208.0)
 ```
-https://unyt.land/x/xml2js@1.0.0/mod.ts?raw
+https://unyt.land/std@0.208.0/csv/mod.ts
 ```
 
 ### Load latest version
@@ -81,6 +81,14 @@ https://unyt.land/x/xml2js@1.0.0/mod.ts?raw
 https://unyt.land/x/xml2js/mod.ts
 ```
 
+```
+https://unyt.land/std/csv/mod.ts
+```
+
+### Load without deno polyfill (not recommended)
+```
+https://unyt.land/x/xml2js@1.0.0/mod.ts?raw
+```
 
 ## GitHub
 You can load any GitHub release, commit, or branch via `https://unyt.land/gh/` by passing user, repo, version and file path.
