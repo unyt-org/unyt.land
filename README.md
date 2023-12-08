@@ -62,31 +62,32 @@ to
 import mod from "https://unyt.land/x/mod.ts"
 ```
 
-`unyt.land` automatically injects a polyfill to provide `Deno.*` APIs in the browser.
-This polyfill is still experimental and does not implement all Deno APIs correctly.
+> [!Warning]
+> `unyt.land` automatically injects [a polyfill](https://github.com/unyt-org/deno-web-polyfill) to provide `Deno.*` APIs in the browser.
+> This polyfill is experimental and does not yet implement all Deno APIs correctly.
 
 
 ### Load a specific version (xml2js@1.0.0)
-```
+```Email
 https://unyt.land/x/xml2js@1.0.0/mod.ts
 ```
 
 ### Load std modules (csv@0.208.0)
-```
+```Email
 https://unyt.land/std@0.208.0/csv/mod.ts
 ```
 
 ### Load latest version
-```
+```Email
 https://unyt.land/x/xml2js/mod.ts
 ```
 
-```
+```Email
 https://unyt.land/std/csv/mod.ts
 ```
 
 ### Load without deno polyfill (not recommended)
-```
+```Email
 https://unyt.land/x/xml2js@1.0.0/mod.ts?raw
 ```
 
@@ -94,17 +95,17 @@ https://unyt.land/x/xml2js@1.0.0/mod.ts?raw
 You can load any GitHub release, commit, or branch via `https://unyt.land/gh/` by passing user, repo, version and file path.
 
 ### Load any GitHub file
-```
+```Email
 https://unyt.land/gh/user/repo@version/file
 ```
 
 ### Load a specific verion (command-line-args@v0.0.3)
-```
+```Email
 https://unyt.land/gh/unyt-org/command-line-args@v0.0.3/main.ts
 ```
 
 ### Load latest version
-```
+```Email
 https://unyt.land/gh/unyt-org/command-line-args/main.ts
 ```
 
@@ -112,7 +113,7 @@ https://unyt.land/gh/unyt-org/command-line-args/main.ts
 ## Other
 You can load any other web import using `https://unyt.land/web/` with the URL appended to the path.<br/>
 Load the icon under "https://unyt.org/favicon.ico" throught the unyt.land proxy:
-```
+```q
 https://unyt.land/web/https://unyt.org/favicon.ico
 ```
 
