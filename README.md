@@ -5,7 +5,7 @@
   <br>
   <i>
     Our super-fast CDN that enables seamless TypeScript module loading directly in the browser.<br/>
-    Use <a href="https://deno.land">Deno</a> modules and open-source TypeScript code in your browser in a matter of seconds.
+    Use <a href="https://deno.com">Deno</a> modules from <a href="https://jsr.io">JSR</a> or <a href="https://deno.land">deno.land</a> and open-source TypeScript code in your browser in a matter of seconds.
   </i>
   <br>
 </p>
@@ -46,12 +46,12 @@ Our service comes equipped with those exciting features:
 * JSX support ([UIX](https://uix.unyt.org) import source)
 * ~~SourceMaps~~ (currently in development)
 
-This means you can effortlessly load modules from common providers such as [deno.land](https://deno.land) or [GitHub](https://github.com) in the browser.
+This means you can effortlessly load modules from common providers such as [JSR](https://jsr.io), [deno.land](https://deno.land) or [GitHub](https://github.com) in the browser.
 
 
 # How to use unyt.land?
 
-## Deno
+## deno.land
 This one is pretty easy - refactor your `deno.land` imports to use `unyt.land` instead!
 
 ```ts
@@ -89,6 +89,24 @@ https://unyt.land/std/csv/mod.ts
 ### Load without deno polyfill (not recommended)
 ```Email
 https://unyt.land/x/xml2js@1.0.0/mod.ts?raw
+```
+
+## JSR
+You can load any JSR release via `https://unyt.land/@<scope>/<package>/<version>/<path>` by passing scope, package and optionally the package version and file path.
+
+
+> [!Warning]
+> `unyt.land` automatically injects [a polyfill](https://github.com/unyt-org/deno-web-polyfill) to provide `Deno.*` APIs in the browser.
+> This polyfill is experimental and does not yet implement all Deno APIs correctly.
+
+### Load a specific release (@luca/flag) in version 1.0.0
+```Email
+https://unyt.land/@luca/flag/1.0.0/main.ts
+```
+
+### Load latest version (@oxi/core)
+```Email
+https://unyt.land/@oxi/core
 ```
 
 ## GitHub
